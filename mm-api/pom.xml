@@ -18,10 +18,23 @@
 			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>br.com.mm-java-backend</groupId>
+			<artifactId>mm-service</artifactId>
+			<version>${mm.backend.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>br.com.mm-java-backend</groupId>
+			<artifactId>mm-service-${mm.service.impl.sufix}</artifactId>
+			<version>${mm.backend.version}</version>
+		</dependency>
 
 	</dependencies>
 
 	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>

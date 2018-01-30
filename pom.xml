@@ -8,10 +8,14 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>mm-api</module>
+		<module>mm-service</module>
+		<module>mm-service-impl</module>
 	</modules>
 
 	<properties>
 		<spring.version>4.3.5.RELEASE</spring.version>
+		<mm.backend.version>0.0.1-SNAPSHOT</mm.backend.version>
+		<mm.service.impl.sufix>impl</mm.service.impl.sufix>
 	</properties>
 
 	<dependencies>
