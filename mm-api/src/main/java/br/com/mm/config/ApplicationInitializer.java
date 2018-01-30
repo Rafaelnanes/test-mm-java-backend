@@ -12,8 +12,6 @@ public class ApplicationInitializer extends AbstractAnnotationConfigDispatcherSe
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-	// when use this ? when apply different servlets in application?
-	// return new Class<?>[] { WebConfig.class };
 	return null;
     }
 

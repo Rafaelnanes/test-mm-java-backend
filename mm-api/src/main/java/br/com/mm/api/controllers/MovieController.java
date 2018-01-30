@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class MovieController {
 
     @RequestMapping(method = RequestMethod.GET)
-    public String test() {
-	return "Alow";
+    public String send() {
+	return "asasdd";
     }
 
 }
