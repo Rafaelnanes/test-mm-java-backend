@@ -16,7 +16,7 @@ public class MovieController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String send() {
-	return movieService.getAnything();
+	return movieService.getMoviesFromAPi();
     }
 
 }
