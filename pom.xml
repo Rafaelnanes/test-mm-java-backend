@@ -10,6 +10,7 @@
 		<module>mm-api</module>
 		<module>mm-service</module>
 		<module>mm-service-impl</module>
+		<module>mm-config</module>
 	</modules>
 
 	<properties>

@@ -8,6 +8,14 @@
 	</parent>
 	<artifactId>mm-service</artifactId>
 
+	<dependencies>
+		<dependency>
+			<groupId>br.com.mm-java-backend</groupId>
+			<artifactId>mm-config</artifactId>
+			<version>${mm.backend.version}</version>
+		</dependency>
+	</dependencies>
+
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
 	</build>

@@ -9,6 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableWebMvc
 @ComponentScan(basePackages = { //
 	"br.com.mm.config", //
+	"br.com.mm.api.handlers", //
 	"br.com.mm.api.controllers" })
 public class ApplicationConfig extends WebMvcConfigurerAdapter {
 

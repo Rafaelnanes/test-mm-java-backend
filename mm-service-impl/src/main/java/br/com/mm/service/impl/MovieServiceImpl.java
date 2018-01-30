@@ -3,8 +3,11 @@ package br.com.mm.service.impl;
 import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
+import br.com.mm.config.GlobalConstants;
+import br.com.mm.config.exceptions.MMException;
 import br.com.mm.service.MovieService;
 import br.com.mm.service.RequestService;
 
@@ -14,14 +17,16 @@ public class MovieServiceImpl implements MovieService {
     @Autowired
     private RequestService requestService;
 
+    @Autowired
+    private Environment environment;
+
     @Override
-    public String getMoviesFromAPi() {
+    public String getMoviesFromAPi() throws MMException {
 	String response = "";
 	try {
-	    response = requestService.sendSimpleGet("http://sonaesodetapi.herokuapp.com/api/v2/movie?shoppingId=1");
+	    response = requestService.sendSimpleGet(environment.getProperty(GlobalConstants.API_URL));
 	} catch (IOException e) {
-	    System.out.println(e.getMessage());
-	    // TODO
+	    throw new MMException(String.format("Error sending request to Main Api, cause: %s", e.getMessage()));
 	}
 	return response;
     }
