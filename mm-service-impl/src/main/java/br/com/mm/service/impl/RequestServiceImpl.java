@@ -1,20 +1,20 @@
 package br.com.mm.service.impl;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
 import org.springframework.stereotype.Service;
 
+import br.com.mm.config.exceptions.MMException;
 import br.com.mm.service.RequestService;
 
 @Service
 public class RequestServiceImpl implements RequestService {
 
     @Override
-    public String sendSimpleGet(String url) throws IOException {
+    public String sendSimpleGet(String url) throws Exception {
 	String response = "";
 	URL obj = new URL(url);
 	HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -32,7 +32,7 @@ public class RequestServiceImpl implements RequestService {
 	    response = sb.toString();
 
 	} else {
-	    // TODO
+	    throw new MMException("Invalid Status");
 	}
 
 	return response;

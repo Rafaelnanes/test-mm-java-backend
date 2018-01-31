@@ -1,0 +1,1 @@
+create table SHO_SHOPPING (SHO_ID bigint not null auto_increment, SHO_API_RESPONSE longtext not null, primary key (SHO_ID))

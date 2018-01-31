@@ -1,7 +1,5 @@
 package br.com.mm.service.impl;
 
-import java.io.IOException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
@@ -34,7 +32,7 @@ public class ShoppingServiceImpl implements ShoppingService {
 		String response = requestService.sendSimpleGet(environment.getProperty(GlobalConstants.API_URL));
 		shopping.setApiResponse(response);
 		shoppingDAO.add(shopping);
-	    } catch (IOException e) {
+	    } catch (Exception e) {
 		throw new MMException(String.format("Error sending request to Main Api, cause: %s", e.getMessage()));
 	    }
 	}

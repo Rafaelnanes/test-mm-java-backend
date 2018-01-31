@@ -11,7 +11,7 @@
 	<packaging>war</packaging>
 
 	<dependencies>
-	
+
 		<!-- SPRING -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -24,7 +24,7 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		
+
 		<!-- SERVLET -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -32,13 +32,20 @@
 			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
+		<!-- FLYWAY -->
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>4.0.3</version>
+		</dependency>
+
 		<dependency>
 			<groupId>br.com.mm-java-backend</groupId>
 			<artifactId>mm-service</artifactId>
 			<version>${mm.backend.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>br.com.mm-java-backend</groupId>
 			<artifactId>mm-service-${mm.service.impl.sufix}</artifactId>
@@ -48,6 +55,11 @@
 	</dependencies>
 
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<plugins>
 			<plugin>
