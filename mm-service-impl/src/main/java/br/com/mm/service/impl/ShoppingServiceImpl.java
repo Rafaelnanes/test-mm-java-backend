@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import br.com.mm.config.GlobalConstants;
 import br.com.mm.config.exceptions.MMException;
 import br.com.mm.dao.ShoppingDAO;
-import br.com.mm.model.Shopping;
+import br.com.mm.model.entities.Shopping;
 import br.com.mm.service.RequestService;
 import br.com.mm.service.ShoppingService;
 

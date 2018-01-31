@@ -1,4 +1,4 @@
-package br.com.mm.model;
+package br.com.mm.model.entities;
 
 import java.io.Serializable;
 

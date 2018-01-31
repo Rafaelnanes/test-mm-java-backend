@@ -16,7 +16,7 @@ public class ShoppingController {
     private ShoppingService shoppingService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String send() throws MMException {
+    public String get() throws MMException {
 	return shoppingService.getMoviesFromAPi();
     }
 

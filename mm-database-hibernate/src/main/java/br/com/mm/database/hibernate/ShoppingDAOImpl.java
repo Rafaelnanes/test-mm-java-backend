@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import br.com.mm.dao.ShoppingDAO;
-import br.com.mm.model.Shopping;
+import br.com.mm.model.entities.Shopping;
 
 @Repository
 @Transactional

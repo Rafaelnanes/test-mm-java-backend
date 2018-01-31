@@ -4,7 +4,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = { "br.com.mm.model" })
+@ComponentScan(basePackages = { "br.com.mm.model.entities" })
 public class ModelConfig {
 
 }

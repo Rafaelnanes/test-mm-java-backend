@@ -14,6 +14,11 @@
 			<artifactId>mm-config</artifactId>
 			<version>${mm.backend.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>br.com.mm-java-backend</groupId>
+			<artifactId>mm-model</artifactId>
+			<version>${mm.backend.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>
