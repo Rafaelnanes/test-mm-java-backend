@@ -2,7 +2,7 @@ package br.com.mm.service;
 
 import br.com.mm.config.exceptions.MMException;
 
-public interface MovieService {
+public interface ShoppingService {
 
     String getMoviesFromAPi() throws MMException;
 

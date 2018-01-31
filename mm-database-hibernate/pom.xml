@@ -6,28 +6,34 @@
 		<artifactId>mm-backend</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>mm-service-impl</artifactId>
+	<artifactId>mm-database-hibernate</artifactId>
 
 	<dependencies>
 		<dependency>
-			<groupId>br.com.mm-java-backend</groupId>
-			<artifactId>mm-service</artifactId>
-			<version>${mm.backend.version}</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
+
 		<dependency>
-			<groupId>br.com.mm-java-backend</groupId>
-			<artifactId>mm-config</artifactId>
-			<version>${mm.backend.version}</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>br.com.mm-java-backend</groupId>
-			<artifactId>mm-database-${mm.database.impl.sufix}</artifactId>
+			<artifactId>mm-database</artifactId>
 			<version>${mm.backend.version}</version>
 		</dependency>
-	</dependencies>
+		
+		<!-- MySQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.31</version>
+		</dependency>
 
-	<build>
-		<sourceDirectory>src/main/java</sourceDirectory>
-	</build>
+		
+	</dependencies>
 </project>

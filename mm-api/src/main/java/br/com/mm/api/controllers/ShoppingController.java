@@ -6,18 +6,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.mm.config.exceptions.MMException;
-import br.com.mm.service.MovieService;
+import br.com.mm.service.ShoppingService;
 
 @RestController
-@RequestMapping("/movie")
-public class MovieController {
+@RequestMapping("/shopping")
+public class ShoppingController {
 
     @Autowired
-    private MovieService movieService;
+    private ShoppingService shoppingService;
 
     @RequestMapping(method = RequestMethod.GET)
     public String send() throws MMException {
-	return movieService.getMoviesFromAPi();
+	return shoppingService.getMoviesFromAPi();
     }
 
 }
